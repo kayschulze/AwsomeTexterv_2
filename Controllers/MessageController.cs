@@ -23,13 +23,15 @@ namespace AwesomeTexter.Controllers
 
         public IActionResult SendMessage()
         {
-            return View();
+            var contactList = new ApplicationDbContext().Contacts.ToList();
+            return View(contactList);
         }
 
         [HttpPost]
         public IActionResult SendMessage(Message newMessage)
         {
-            newMessage.Send();
+            var contactList = new ApplicationDbContext().Contacts.ToList();
+            newMessage.Send(contactList);
             return RedirectToAction("GetMessages");
         }
     }

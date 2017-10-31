@@ -35,17 +35,27 @@ namespace AwesomeTexter.Models
             return messageList;
         }
 
-        public void Send()
+        public void Send(List<Contact> contacts)
         {
             var client = new RestClient("https://api.twilio.com/2010-04-01");
             var request = new RestRequest("Accounts/" + EnvironmentVariable.AccountSid + "/Messages", Method.POST);
-            request.AddParameter("To", To);
-            request.AddParameter("From", From);
-            request.AddParameter("Body", Body);
-            client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariable.AccountSid, EnvironmentVariable.AuthToken);
-            client.ExecuteAsync(request, response => {
-                Console.WriteLine(response.Content);
-            });
+
+            foreach (var contact in contacts)
+            {
+                contact.IsChecked = true;
+                if (contact.IsChecked)
+                {
+                    request.AddParameter("To", contact.PhoneNumber);
+                    request.AddParameter("From", From);
+                    request.AddParameter("Body", Body);
+                    client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariable.AccountSid, EnvironmentVariable.AuthToken);
+                    client.ExecuteAsync(request, response => {
+                        Console.WriteLine(response.Content);
+                    });
+                }
+            }
+
+
         }
 
         public static Task<IRestResponse> GetResponseContentAsync(RestClient theClient, RestRequest theRequest)

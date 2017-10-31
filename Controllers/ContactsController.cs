@@ -29,6 +29,12 @@ namespace AwesomeTexter.Controllers
             var contactList = db.Contacts.ToList();
             return View(contactList);
         }
+
+        public PartialViewResult GetOurContacts()
+        {
+            var contactList = db.Contacts.ToList();
+            return PartialView(contactList);
+        }
         public IActionResult Details(int id)
         {
             var contact = db.Contacts.FirstOrDefault(c => c.ContactId == id);

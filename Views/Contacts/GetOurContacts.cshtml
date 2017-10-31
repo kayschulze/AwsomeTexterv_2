@@ -1,0 +1,13 @@
+﻿@model IEnumerable<AwesomeTexter.Models.Contact>
+@using (Html.BeginForm())
+{
+    <ol>
+        @foreach (var contact in Model)
+        {        
+          <!-- <li>@contact.FirstName @contact.LastName</li>-->
+           <p>@contact.FirstName @contact.LastName @Html.CheckBoxFor(m => contact.IsChecked)</p>
+        }
+     </ol>
+     <input type="submit" value="Send"/>
+}
+    

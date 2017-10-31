@@ -7,18 +7,53 @@
 
 @using (Html.BeginForm())
 {
-    <div class="form-group">
+    
+<!--    <div class="form-group">
+    	@Html.LabelFor(model => model.To)
+        @Html.TextBoxFor(model =>model.To)
     </div>
-    @Html.LabelFor(model => model.To)
-    @Html.TextBoxFor(model =>model.To)
-<!--
-    @Html.LabelFor(model => model.From)
-    @Html.TextBoxFor(model => model.From)-->
+    <div class="form-group">
+        @Html.LabelFor(model => model.Body)
+        @Html.TextAreaFor(model => model.Body, new{@row = 10})    
+    </div>
+    <div>
+	    <input type="submit" value="Send!" />
+    </div>-->
+    <div class="row">
+	    <div class="col-md-7">
+    		<div class="form-horizontal">
+            <div class="form-group">
+                <!--<input type="hidden" name="ProductId" value="@ViewBag.ProductId" />-->
+                 @Html.LabelFor(model => model.To, new { @class = "col-md-1 label-control" })
+                <div class="col-md-6">
+                    @Html.TextBoxFor(model => model.To, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.To, null, new { @class = "text-danger" })
+                    <img src="~/images/phoneBook.jpeg" id="phoneBook"/>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                @Html.LabelFor(model => model.Body, new { @class = "col-md-1 label-control" })
+                <div class="col-md-6">
+                    @Html.TextAreaFor(model => model.Body, new { @class = "form-control", @rows = 3 })
+                    @Html.ValidationMessageFor(m => m.Body, null, new { @class = "text-danger" })
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <input type="submit" value="Send" formmethod="post" class="btn btn-lg btn-primary" />
+                </div>
+            </div>
+            </div>
+	  
+	    <div class="col-md-5">
+			<div id="contactListDiv"></div>
+        </div>
+    </div>
+	</div>
 
-    @Html.LabelFor(model => model.Body)
-    @Html.TextAreaFor(model => model.Body, new{@row = 10})
-
-    <input type="submit" value="Send!" />
 }
 
 @Html.ActionLink("Back Home", "Index")
