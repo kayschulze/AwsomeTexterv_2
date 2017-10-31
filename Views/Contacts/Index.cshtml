@@ -1,0 +1,68 @@
+﻿@model IEnumerable<AwesomeTexter.Models.Contact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if(Model == null)
+{
+    <img src="~/images/Web-under-construction.jpg" alt="under construction" style="height: 700px; widows: 1000px;" />
+
+}
+else
+{
+    <h2>Contact List</h2>
+
+    <p>
+        <a href="@Url.Action("Create")" class="btn btn-lg btn-primary">
+            <i class="fa fa-2x fa-plus" aria-hidden="true"></i>
+            <span>Create New </span>
+
+        </a>
+    </p>
+    <hr />
+
+    <table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var contact in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => contact.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => contact.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => contact.PhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = contact.ContactId })
+            </td>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = contact.ContactId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = contact.ContactId })
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+@Html.ActionLink("Send Message", "SendMessage", "Message" )
+
+
+}

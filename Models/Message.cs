@@ -18,6 +18,7 @@ namespace AwesomeTexter.Models
         public string From { get;}
         public string Body { get; set; }
         public string Status { get; set; }
+        public bool IsChecked { get; set; }
 
         public static List<Message> GetMessages()
         {

@@ -1,0 +1,24 @@
+﻿@model AwesomeTexter.Models.Message
+
+<h1>Message Center:</h1>
+
+<h2>Send A New Message</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+    </div>
+    @Html.LabelFor(model => model.To)
+    @Html.TextBoxFor(model =>model.To)
+<!--
+    @Html.LabelFor(model => model.From)
+    @Html.TextBoxFor(model => model.From)-->
+
+    @Html.LabelFor(model => model.Body)
+    @Html.TextAreaFor(model => model.Body, new{@row = 10})
+
+    <input type="submit" value="Send!" />
+}
+
+@Html.ActionLink("Back Home", "Index")

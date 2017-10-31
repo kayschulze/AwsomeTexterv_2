@@ -1,6 +1,4 @@
-﻿using System;
-using MariosMarketplace.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AwesomeTexter.Models

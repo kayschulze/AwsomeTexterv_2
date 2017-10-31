@@ -13,7 +13,7 @@ namespace AwesomeTexter.Models
         public string FirstName { get; set; }
 
         [Required]
-                 [Display(Name = "Last Name")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
         [Required]

@@ -7,3 +7,4 @@
 /Users/Guest/Desktop/AwesomeTexter/AwesomeTexter/obj/Debug/netcoreapp1.1/AwesomeTexter.AssemblyInfo.cs
 /Users/Guest/Desktop/AwesomeTexter/AwesomeTexter/obj/Debug/netcoreapp1.1/AwesomeTexter.dll
 /Users/Guest/Desktop/AwesomeTexter/AwesomeTexter/obj/Debug/netcoreapp1.1/AwesomeTexter.pdb
+/Users/Guest/Desktop/AwesomeTexter/AwesomeTexter/obj/Debug/netcoreapp1.1/AwesomeTexter.csproj.CoreCompileInputs.cache

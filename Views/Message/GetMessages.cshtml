@@ -1,0 +1,19 @@
+﻿@model IEnumerable<AwesomeTexter.Models.Message>
+
+<h2>All Message</h2>
+
+<ol>
+    @foreach (var message in Model)
+	{
+        <li>
+            <ul>
+                <li>To: @Html.DisplayFor(m => message.To)</li>
+			    <li>From: @Html.DisplayFor(m => message.From)</li>
+			    <li>Body: @Html.DisplayFor(m => message.Body)</li>
+			    <li>Status: @Html.DisplayFor(m => message.Status)</li>
+		    </ul>
+	    </li>
+	}
+</ol>
+
+@Html.ActionLink("Back Home", "Index")
