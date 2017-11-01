@@ -1,6 +1,4 @@
-﻿// Write your Javascript code.
-
-
+﻿
 $("img#phoneBook").click(function(){
     $.ajax({
         type: 'GET',
@@ -9,8 +7,31 @@ $("img#phoneBook").click(function(){
         dataType: 'html'
     })
     .success(function(result){
-        alert("I am here");
         $('#contactListDiv').html(result);
     })
 
 });
+
+$("body").on("click", "li", function () {
+    var phoneNumber = $("#phoneNumber").text().trim();
+    if ($("input#To").val() === "") {
+        $("input#To").val(phoneNumber);
+    } else {
+        $("input#To").val($("input#To").val() + ", " + phoneNumber);
+    }
+});
+
+//$("#btnSend").click(function (event) {
+//    event.preventDefault();
+//    var phoneNumbers = $('input#To').val();
+//    $.ajax({
+//        type: 'POST',
+//        url: '@Url.Action("SendMessage")',
+//        dataType: 'json',
+//        data: $(this).serialize()
+
+//    })
+//        .success(function (resulst) {
+
+//        })
+//});

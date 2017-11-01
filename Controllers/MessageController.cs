@@ -24,13 +24,17 @@ namespace AwesomeTexter.Controllers
         public IActionResult SendMessage()
         {
             var contactList = new ApplicationDbContext().Contacts.ToList();
-            return View(contactList);
+            return View();
         }
 
         [HttpPost]
         public IActionResult SendMessage(Message newMessage)
         {
-            var contactList = new ApplicationDbContext().Contacts.ToList();
+            string phoneNumbers = newMessage.To;
+            string[] phoneNumberArr = phoneNumbers.Trim().Split(',');
+
+            var contactList = new ApplicationDbContext().Contacts
+                .Where(c => phoneNumberArr.Contains(c.PhoneNumber)).ToList();
             newMessage.Send(contactList);
             return RedirectToAction("GetMessages");
         }

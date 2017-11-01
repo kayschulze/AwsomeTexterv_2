@@ -42,17 +42,15 @@ namespace AwesomeTexter.Models
 
             foreach (var contact in contacts)
             {
-                contact.IsChecked = true;
-                if (contact.IsChecked)
-                {
-                    request.AddParameter("To", contact.PhoneNumber);
-                    request.AddParameter("From", From);
-                    request.AddParameter("Body", Body);
-                    client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariable.AccountSid, EnvironmentVariable.AuthToken);
-                    client.ExecuteAsync(request, response => {
-                        Console.WriteLine(response.Content);
-                    });
-                }
+
+                request.AddParameter("To", contact.PhoneNumber);
+                request.AddParameter("From", From);
+                request.AddParameter("Body", Body);
+                client.Authenticator = new HttpBasicAuthenticator(EnvironmentVariable.AccountSid, EnvironmentVariable.AuthToken);
+                client.ExecuteAsync(request, response => {
+                    Console.WriteLine(response.Content);
+                });
+             
             }
 
 

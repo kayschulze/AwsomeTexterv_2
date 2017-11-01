@@ -8,3 +8,14 @@
 /Users/Guest/Desktop/AwesomeTexter/AwesomeTexter/obj/Debug/netcoreapp1.1/AwesomeTexter.dll
 /Users/Guest/Desktop/AwesomeTexter/AwesomeTexter/obj/Debug/netcoreapp1.1/AwesomeTexter.pdb
 /Users/Guest/Desktop/AwesomeTexter/AwesomeTexter/obj/Debug/netcoreapp1.1/AwesomeTexter.csproj.CoreCompileInputs.cache
+C:\Users\mgebr\Desktop\AwsomeTexter\bin\Debug\netcoreapp1.1\AwesomeTexter.deps.json
+C:\Users\mgebr\Desktop\AwsomeTexter\bin\Debug\netcoreapp1.1\AwesomeTexter.runtimeconfig.json
+C:\Users\mgebr\Desktop\AwsomeTexter\bin\Debug\netcoreapp1.1\AwesomeTexter.runtimeconfig.dev.json
+C:\Users\mgebr\Desktop\AwsomeTexter\bin\Debug\netcoreapp1.1\AwesomeTexter.dll
+C:\Users\mgebr\Desktop\AwsomeTexter\bin\Debug\netcoreapp1.1\AwesomeTexter.pdb
+C:\Users\mgebr\Desktop\AwsomeTexter\obj\Debug\netcoreapp1.1\AwesomeTexter.csprojResolveAssemblyReference.cache
+C:\Users\mgebr\Desktop\AwsomeTexter\obj\Debug\netcoreapp1.1\AwesomeTexter.csproj.CoreCompileInputs.cache
+C:\Users\mgebr\Desktop\AwsomeTexter\obj\Debug\netcoreapp1.1\AwesomeTexter.AssemblyInfoInputs.cache
+C:\Users\mgebr\Desktop\AwsomeTexter\obj\Debug\netcoreapp1.1\AwesomeTexter.AssemblyInfo.cs
+C:\Users\mgebr\Desktop\AwsomeTexter\obj\Debug\netcoreapp1.1\AwesomeTexter.dll
+C:\Users\mgebr\Desktop\AwsomeTexter\obj\Debug\netcoreapp1.1\AwesomeTexter.pdb
